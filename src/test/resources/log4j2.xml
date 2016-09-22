@@ -1,25 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
-    <Appenders>
-        <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%p [%t] %c{1}.%M(%L) | %m%n"/>
-        </Console>
-    </Appenders>
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%p [%t] %c{1}.%M(%L) | %m%n"/>
+		</Console>
+		
+		<RollingFile name="RollingFile" fileName="D:/java_work/logs/Appfuse7Test.log"
+			filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+			<PatternLayout>
+				<Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="10 MB"/>
+			</Policies>
+		</RollingFile>
+		
+	</Appenders>
+	<!--
+	<appender name ="file" class="org.apache.log4j.RollingFileAppender">
+		<param name="append" value="false" />
+		<param name="maxFileSize" value="10MB" />
+		<param name="maxBackupIndex" value="10" />
+		<param name="file" value="D:/java_work/logs/Appfuse7Test.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>-->
+    
+	
 
-    <Loggers>
-        <Logger name="net.sf.ehcache" level="error"/>
-        <!-- Suppress success logging from InteractiveAuthenticationSuccessEvent -->
-        <Logger name="org.springframework.security" level="error"/>
-        <Logger name="org.apache" level="warn"/>
-        <Logger name="org.apache.velocity" level="fatal"/>
-        <Logger name="org.hibernate" level="warn"/>
-        <!-- Uncomment if you want to see Hibernate's SQL -->
-        <!--<Logger name="org.hibernate.SQL" level="debug"/>-->
-        <Logger name="org.springframework" level="warn"/>
-        <Logger name="yt.item8" level="debug"/>
 
-        <Root level="warn">
-            <AppenderRef ref="Console" />
-        </Root>
-    </Loggers>
+	<Loggers>
+		<Logger name="net.sf.ehcache" level="error"/>
+		<!-- Suppress success logging from InteractiveAuthenticationSuccessEvent -->
+		<Logger name="org.springframework.security" level="error"/>
+		<Logger name="org.apache" level="warn"/>
+		<Logger name="org.apache.velocity" level="fatal"/>
+		<Logger name="org.hibernate" level="warn"/>
+		<!-- Uncomment if you want to see Hibernate's SQL -->
+		<!--<Logger name="org.hibernate.SQL" level="debug"/>-->
+		<Logger name="org.springframework" level="warn"/>
+		<Logger name="yt.item8" level="debug"/>
+
+		<Root level="warn">
+			<AppenderRef ref="Console" />
+		</Root>
+	</Loggers>
 </Configuration>

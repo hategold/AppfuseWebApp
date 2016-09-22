@@ -119,45 +119,40 @@
             <value description="role_id">-2</value>
         </row>
     </table>
-    
+    <!--Brand-START-->
     <table name="brands">
     	<column>brandId</column>
     	<column>brandName</column>
     	<column>website</column>
     	<column>country</column>
     	<row>
+    		<value description="brandId">-1</value>
+    		<value description="brandName">426</value>
+    		<value description="website">www.king.com</value>
+    		<value description="country">CHN</value>
+    	</row>
+    	<row>
+    		<value description="brandId">0</value>
+    		<value description="brandName">test0</value>
+    		<value description="website">www.test0.com</value>
+    		<value description="country">JPN</value>
+    	</row>
+    	<row>
     		<value description="brandId">1</value>
     		<value description="brandName">adidas</value>
     		<value description="website">www.adidas.com</value>
     		<value description="country">GER</value>
     	</row>
+    	<row>
+    		<value description="brandId">2</value>
+    		<value description="brandName">5566</value>
+    		<value description="website">www.5566.com</value>
+    		<value description="country">TWN</value>
+    	</row>
     </table>
     
-    <!--Brand-START-->
-    <table name="brands">
-        <column>brandId</column>
-        <column>brandName</column>
-        <column>country</column>
-        <column>website</column>
-    <row>
-        <value description="brandId">-1</value>
-        <value description="brandName">HkCvSiIsEoHpHtAyPmTuSwRkBuUkJzJmIrZcClEaFfKgMzXqPtApJmKhCxLxSmFjXhHuUkUpKmLnMwShPzIxMcFdYpQkIpEkRrRdWlRfOqDeBfDzUkScVpJwIaAhZxGgNuBeUmStGaItBzQhYwIhNwYfPoSlNwFsPzQmGvKoMqCsKuUjHgXtFlPpMlDhJeNfWeAcKiApFzHoPsWyKlQlAbLaUdDgVcTtSgMwApFdOlDoLlSyUyEwIoCgTgKkCiV</value>
-        <value description="country">VzQuTfOuRzQgHvRuBdOtEdEhMbNuIaYwRbFwQdGtZqZwXxOtOjNyLjUjYyFkHtMhDjLeGgVoNlYdBpTrVoPbHuPiYpQnPtPuZzTxGnWuYsXbYaIhHhVqRtEyAqXzHfSaLrCsAdYuDqVgLrHwQhVgDrMePdGtAjAfEzZrYfGtEsVdSlZqFbLhWeJxNtYrFnOgZsLeRyXdToFpAxEkPdIrLdFrGzGsJwYwMqOoIzAbVsOmQeXjWgBuTjScZwAdWvW</value>
-        <value description="website">ZjIxRrZhClDfOeSbIiYhWwBiDbUvBuSfTlOrSfLwMuOaWdOuVgJlKmCiSySfMxHeFlKpKvVgFtEgZqMlAkJfYoVvUzLkBkXuSqHlKdXrSgUsWkArIdVsCbAjMuIzTgWsJyPnVzGrOjBhTeBvThBvVbCgKqCbCeUzSgDtJbGtOiVpIzEkXxVnYbPaJgZlIwMpVyKqEwAlCwZyFgWbZsHpWrXxIuBmDiYpJuFrKzWtOwMlQmMnJeIzRiCwQcXnHmQ</value>
-    </row>
-    <row>
-        <value description="brandId">-2</value>
-        <value description="brandName">BfUwBtMuMeGoPmSvDvNbQfKjVgEnHzDcAdTdNnQmDeZeWiClKxKuFvPiYpXjZwCnOvOtIoYfYwQwRzLcSlHxVbKtHjAsBwObNaGdYrFhCjUqOgLhQlRgBmCqVuMkUuUvXcUhJkCpJiZjRsXeCjXuEfRhOxTqOrXqGtRxGuVnWyWaKdEwAdDeQhIxWkTaAuFrLxDaUoCyYiPsJsZrIbIcWlVdIkRbVnKnNeIlJmJqTzGoQyMvUoXiFfPgKuItGwK</value>
-        <value description="country">NfBbWyBfVmPyWaMmInFeLiYqEvJpJlYaFxXeZdIbCjDuRaJzDpInRnSuCuUdSpWjCbShXfBhJqEhQlKwSwFjSoQqBvIlMpPzUkLjYmFdHuGyVyAdJzJtIuHyBqEbRvRsFxQvKzKnYeXeBfCxKxKwUfQzBbQbTgKlCoVzVjYmMrNkJsDdGgLdObUvTxAsQrXiVtViNzWfIxUjVuVhTnTgOpRxYdMrAiBeJrUpCgKiPlCtLoSkWuMsJeYvVdDzBuZ</value>
-        <value description="website">CtAtTmIpFnElEnSaIsHzLwFlMySpSfVmIjYjEbAeVjJjDbWbGkBzRvAoKuOmRmAvLvMwGfTpQnPkLmTmOwOfGhLbHoXnKoBcUaRgIwDsVxXlWtHdSdAjYqTcWyIoHrRcBmPxOmPbRkOrZoBxOkOdEfCmZoCbIhRjFqFdJiAaLxRnFsZbXfZpYfVcXgLuOkJqPyPkWrFvCeHaHcHkIuNrZpJwZwJrGsZdJpLfTuZxTkQhVnRjArZhDnDmJhHyDjN</value>
-    </row>
-    <row>
-        <value description="brandId">-3</value>
-        <value description="brandName">WeZsZhRyQxQvKfYuReVbEgWyZfMnUtWxCzGrNtGkHkSjJqCwPpKwJvAiZwDkQiCgHgXdYsWjWcIlKpEtNiOzWhYkQqIfKrSjCiAxGcYbVhJbQjSzMqVkJpOvOlJxNoWrTbKlLfZkOdLrQzDjHlEwKqDcCzEgIbYgPvDzMuPaGhXvTgVoOuBnThGbWdSlXiRbYmKoByBkCxSkEfHaHnXtBpWnMlQpSqSrCwNsEpZcPvYsNqXhLkQjOhMmOwHqBoA</value>
-        <value description="country">XtMeZeSgMkBhFuAeIbIvSiEwGbDyPhNvBnHwAvRdRxNyAeRkIhXoOoLrZtWfWqLvDsXyWgPvOpWsHpXgMyDzTeNuJxCwCyWmKpCjGxKbFjVhHaYuJePzIuRhUkIsUbAnHlEdJlPbOeSvWkOuFkLbAoQhKaNuSbMdIiEsAcWsDxXxNqGfTnGlQwNqTuIyEaWsQxTzPxJbLmAnDxQxBkNnBsBzNzUkUxRnHjVzSuRxClYmLhApTnWlHqYzMwExItT</value>
-        <value description="website">EiZaOwDuVoFoXmKjHmYeGuToCuEyTuBpOrKqOlMlFbKcEmOfMoMeQeFvFmOfJbMgXpTuUvMrYrRkZtZgFbHhSxUqSgIiZgUdEbOvZdFpWrEyPbMvWsHlLlRvXjKnSxYlTvBzDrNlTeHkQeAtMpMoSsQjKaTgNaNnFhWfXzYxPcJhSqBoHwVyHpJvCxTkYkOqNxRjQeLrZfYxPuOuHjVeIrAxFrZvQlEyKrOpBhXgSlFsRaTpMhGwDpHsLhHhNzB</value>
-    </row>
-    </table>
+    
+    
     <!--Brand-END-->
 </dataset>
 

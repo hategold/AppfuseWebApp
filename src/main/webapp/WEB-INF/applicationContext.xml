@@ -28,12 +28,8 @@
 	</bean> 
 
     <!--BrandManager-START-->
-    <bean id="brandManager" class="org.appfuse.service.impl.GenericManagerImpl">
-        <constructor-arg>
-            <bean class="org.appfuse.dao.hibernate.GenericDaoHibernate">
-                <constructor-arg value="yt.item8.model.Brand"/>
-            </bean>
-        </constructor-arg>
+    <bean id="brandManager" class="yt.item8.service.impl.BrandManagerImpl">
+        <constructor-arg ref="brandDao"/>
     </bean>
     <!--BrandManager-END-->
 

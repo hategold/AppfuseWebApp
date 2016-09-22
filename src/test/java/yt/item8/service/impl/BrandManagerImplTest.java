@@ -27,7 +27,7 @@ public class BrandManagerImplTest extends BaseManagerMockTestCase {
     public void testGetBrand() {
         log.debug("testing get...");
         //given
-        final int brandId = 7L;
+        final Integer brandId = 7;
         final Brand brand = new Brand();
         given(dao.get(brandId)).willReturn(brand);
 
@@ -74,7 +74,7 @@ public class BrandManagerImplTest extends BaseManagerMockTestCase {
         log.debug("testing remove...");
 
         //given
-        final int brandId = -11L;
+        final Integer brandId = -11;
         willDoNothing().given(dao).remove(brandId);
 
         //when

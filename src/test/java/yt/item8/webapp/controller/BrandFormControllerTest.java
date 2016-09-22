@@ -36,7 +36,7 @@ public class BrandFormControllerTest extends BaseControllerTestCase {
     public void testEdit() throws Exception {
         log.debug("testing edit...");
         mockMvc.perform(get("/brandform")
-            .param("brandId", "-1"))
+            .param("brandId", "1"))
             .andExpect(status().isOk())
             .andExpect(model().attributeExists("brand"));
     }
@@ -57,7 +57,7 @@ public class BrandFormControllerTest extends BaseControllerTestCase {
     @Test
     public void testRemove() throws Exception {
         HttpSession session = mockMvc.perform((post("/brandform"))
-            .param("delete", "").param("brandId", "-2"))
+            .param("delete", "").param("brandId", "-1"))
             .andExpect(status().is3xxRedirection())
             .andReturn().getRequest().getSession();
 

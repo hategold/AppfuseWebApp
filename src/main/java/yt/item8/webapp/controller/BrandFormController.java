@@ -55,8 +55,10 @@ public class BrandFormController extends BaseFormController {
 
         if (validator != null) { // validator is null during testing
             validator.validate(brand, errors);
-
+            
             if (errors.hasErrors() && request.getParameter("delete") == null) { // don't validate when deleting
+            	log.debug("validate failed...");
+            	log.debug(brand);
                 return "brandform";
             }
         }

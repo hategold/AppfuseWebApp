@@ -14,7 +14,7 @@ import javax.persistence.Transient;
 
 @Entity(
 	name = "brands")
-public class Brand implements Serializable, EntityInterface {
+public class Brand extends BaseObject implements Serializable, EntityInterface {
 
 	private static final long serialVersionUID = 1L;
 
@@ -93,6 +93,7 @@ public class Brand implements Serializable, EntityInterface {
 		return brandId + " " + brandName + " " + website + " " + country;
 
 	}
+
 //	@ManyToOne(cascade = CascadeType.ALL)
 //	public Set<Shoes> getShoesGroup() {
 //		return shoesGroup;
@@ -119,6 +120,26 @@ public class Brand implements Serializable, EntityInterface {
 	public void setForeignClassNull() {
 //		setShoesGroup(null);
 
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		Brand obj = null;
+		try {
+			obj = this.getClass().cast(o);
+		} catch (Exception e) {
+			return false;
+		}
+
+		if (obj.getBrandId().equals(this.brandId))
+			return true;
+		
+		return false;
+	}
+
+	@Override
+	public int hashCode() {
+		return this.brandName.hashCode() + this.brandId.hashCode() + 7 * 40;
 	}
 
 }

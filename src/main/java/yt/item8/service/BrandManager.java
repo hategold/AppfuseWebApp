@@ -1,6 +1,6 @@
 package yt.item8.service;
 
-import org.appfuse.service.GenericManager;
+import yt.item8.service.GenericManager;
 import yt.item8.model.Brand;
 
 import java.util.List;
