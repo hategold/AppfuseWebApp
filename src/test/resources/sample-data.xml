@@ -126,17 +126,17 @@
     	<column>website</column>
     	<column>country</column>
     	<row>
-    		<value description="brandId">-1</value>
+    		<value description="brandId">3</value>
     		<value description="brandName">426</value>
     		<value description="website">www.king.com</value>
     		<value description="country">CHN</value>
     	</row>
-    	<row>
+    	<!--<row>
     		<value description="brandId">0</value>
     		<value description="brandName">test0</value>
     		<value description="website">www.test0.com</value>
     		<value description="country">JPN</value>
-    	</row>
+    	</row>-->
     	<row>
     		<value description="brandId">1</value>
     		<value description="brandName">adidas</value>

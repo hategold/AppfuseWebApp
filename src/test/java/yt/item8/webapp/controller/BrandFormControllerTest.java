@@ -57,7 +57,7 @@ public class BrandFormControllerTest extends BaseControllerTestCase {
     @Test
     public void testRemove() throws Exception {
         HttpSession session = mockMvc.perform((post("/brandform"))
-            .param("delete", "").param("brandId", "-1"))
+            .param("delete", "").param("brandId", "1"))
             .andExpect(status().is3xxRedirection())
             .andReturn().getRequest().getSession();
 
