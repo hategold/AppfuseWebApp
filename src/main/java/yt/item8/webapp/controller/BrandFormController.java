@@ -78,7 +78,8 @@ public class BrandFormController extends BaseFormController {
 			saveMessage(request, getText(key, locale));
 
 			if (!isNew) {
-				success = "redirect:brandform?brandId=" + brand.getBrandId();
+//				success = "redirect:brandform?brandId=" + brand.getBrandId();
+				success = "redirect:brands";
 			}
 		}
 

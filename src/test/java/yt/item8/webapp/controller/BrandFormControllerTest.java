@@ -17,6 +17,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+import java.util.Arrays;
+
 @Transactional
 public class BrandFormControllerTest extends BaseControllerTestCase {
     @Autowired
@@ -46,11 +48,10 @@ public class BrandFormControllerTest extends BaseControllerTestCase {
         HttpSession session = mockMvc.perform(post("/brandform")
             )
             .andExpect(status().is3xxRedirection())
-            .andExpect(model().hasNoErrors())
+//            .andExpect(model().hasNoErrors()) //we change the redirect to main entity page
             .andReturn()
             .getRequest()
             .getSession();
-
         assertNotNull(session.getAttribute("successMessages"));
     }
 

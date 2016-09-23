@@ -12,8 +12,12 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 
+import org.hibernate.search.annotations.Field;
+import org.hibernate.search.annotations.Indexed;
+
 @Entity(
 	name = "brands")
+@Indexed
 public class Brand extends BaseObject implements Serializable, EntityInterface {
 
 	private static final long serialVersionUID = 1L;
@@ -59,6 +63,7 @@ public class Brand extends BaseObject implements Serializable, EntityInterface {
 	}
 
 	@Column
+	@Field
 	public String getBrandName() {
 		return brandName;
 	}
@@ -69,6 +74,7 @@ public class Brand extends BaseObject implements Serializable, EntityInterface {
 	}
 
 	@Column
+	@Field
 	public String getWebsite() {
 		return website;
 	}
@@ -79,6 +85,7 @@ public class Brand extends BaseObject implements Serializable, EntityInterface {
 	}
 
 	@Column
+	@Field
 	public String getCountry() {
 		return country;
 	}
