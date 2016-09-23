@@ -104,7 +104,6 @@ public class Brand extends BaseObject implements Serializable, EntityInterface {
 	}
 
 	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name="brandId")
 	public Set<Shoes> getShoesGroup() {
 		return shoesGroup;
 	}

@@ -16,6 +16,9 @@
     <!--Brand-START-->
     <menu:displayMenu name="BrandMenu"/>
     <!--Brand-END-->
+    <!--Shoes-START-->
+    <menu:displayMenu name="ShoesMenu"/>
+    <!--Shoes-END-->
 </ul>
 </div>
 </menu:useMenuDisplayer>

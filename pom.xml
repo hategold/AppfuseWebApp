@@ -108,7 +108,7 @@
     </dependencies>
 
     <properties>
-        <amp.genericCore>true</amp.genericCore>
+        <amp.genericCore>false</amp.genericCore>
         <amp.fullSource>false</amp.fullSource>
         <dao.framework>hibernate</dao.framework>
         <db.name>WebMvcProject7</db.name>

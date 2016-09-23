@@ -17,7 +17,11 @@
         <!--Brand-START-->
         <Menu name="BrandMenu" title="brandList.title" page="/brands"/>
         <!--Brand-END-->
+        <!--Shoes-START-->
+        <Menu name="ShoesMenu" title="shoesList.title" page="/shoess"/>
+        <!--Shoes-END-->
     </Menus>
+
 
 
 </MenuConfig>
