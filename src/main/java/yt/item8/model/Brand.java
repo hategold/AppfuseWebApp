@@ -9,7 +9,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 
 import org.hibernate.search.annotations.Field;
@@ -30,7 +32,7 @@ public class Brand extends BaseObject implements Serializable, EntityInterface {
 
 	private String country;
 
-//	private Set<Shoes> shoesGroup;
+	private Set<Shoes> shoesGroup;
 
 	public Brand() {
 	}
@@ -101,22 +103,23 @@ public class Brand extends BaseObject implements Serializable, EntityInterface {
 
 	}
 
-//	@ManyToOne(cascade = CascadeType.ALL)
-//	public Set<Shoes> getShoesGroup() {
-//		return shoesGroup;
-//	}
-//
-//	public void setShoesGroup(Set<Shoes> shoesGroup) {
-//		this.shoesGroup = shoesGroup;
-//	}
-//
-//	public void addShoes(Shoes shoes) {
-//		shoesGroup.add(shoes);
-//	}
-//
-//	public void removeShoes(Shoes shoes) {
-//		shoesGroup.remove(shoes);
-//	}
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name="brandId")
+	public Set<Shoes> getShoesGroup() {
+		return shoesGroup;
+	}
+
+	public void setShoesGroup(Set<Shoes> shoesGroup) {
+		this.shoesGroup = shoesGroup;
+	}
+
+	public void addShoes(Shoes shoes) {
+		shoesGroup.add(shoes);
+	}
+
+	public void removeShoes(Shoes shoes) {
+		shoesGroup.remove(shoes);
+	}
 	@Transient
 	@Override
 	public int getId() {
