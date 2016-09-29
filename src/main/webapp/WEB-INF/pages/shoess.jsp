@@ -42,6 +42,7 @@
     <display:column property="price" sortable="true" titleKey="shoes.price"/>
     <display:column property="series" sortable="true" titleKey="shoes.series"/>
     <display:column property="shoesName" sortable="true" titleKey="shoes.shoesName"/>
+    <display:column property="brand.brandId" sortable="true" titleKey="brand.brandId"/>
 
     <display:setProperty name="paging.banner.item_name"><fmt:message key="shoesList.shoes"/></display:setProperty>
     <display:setProperty name="paging.banner.items_name"><fmt:message key="shoesList.shoess"/></display:setProperty>

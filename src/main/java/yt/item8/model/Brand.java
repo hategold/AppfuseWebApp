@@ -10,7 +10,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Transient;
 
@@ -36,21 +35,21 @@ public class Brand extends BaseObject implements Serializable, EntityInterface {
 
 	public Brand() {
 	}
-
-	public Brand(String brandName) {
-		this.brandName = brandName;
-	}
-
+//
+//	public Brand(String brandName) {
+//		this.brandName = brandName;
+//	}
+//
 	public Brand(int brandId) {
 		this.brandId = brandId;
 	}
-
-	public Brand(int brandId, String brandName, String website, String country) {
-		this.brandId = brandId;
-		this.brandName = brandName;
-		this.website = website;
-		this.country = country;
-	}
+//
+//	public Brand(int brandId, String brandName, String website, String country) {
+//		this.brandId = brandId;
+//		this.brandName = brandName;
+//		this.website = website;
+//		this.country = country;
+//	}
 
 	@Id
 	@GeneratedValue(
@@ -103,7 +102,9 @@ public class Brand extends BaseObject implements Serializable, EntityInterface {
 
 	}
 
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(
+		cascade = CascadeType.ALL,
+		mappedBy = "brand")
 	public Set<Shoes> getShoesGroup() {
 		return shoesGroup;
 	}
@@ -119,6 +120,7 @@ public class Brand extends BaseObject implements Serializable, EntityInterface {
 	public void removeShoes(Shoes shoes) {
 		shoesGroup.remove(shoes);
 	}
+
 	@Transient
 	@Override
 	public int getId() {
@@ -142,7 +144,7 @@ public class Brand extends BaseObject implements Serializable, EntityInterface {
 
 		if (obj.getBrandId().equals(this.brandId))
 			return true;
-		
+
 		return false;
 	}
 

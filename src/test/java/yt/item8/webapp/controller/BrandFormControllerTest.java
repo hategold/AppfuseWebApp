@@ -17,8 +17,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import java.util.Arrays;
-
 @Transactional
 public class BrandFormControllerTest extends BaseControllerTestCase {
     @Autowired
@@ -38,7 +36,7 @@ public class BrandFormControllerTest extends BaseControllerTestCase {
     public void testEdit() throws Exception {
         log.debug("testing edit...");
         mockMvc.perform(get("/brandform")
-            .param("brandId", "1"))
+            .param("brandId", "-1"))
             .andExpect(status().isOk())
             .andExpect(model().attributeExists("brand"));
     }
@@ -48,17 +46,18 @@ public class BrandFormControllerTest extends BaseControllerTestCase {
         HttpSession session = mockMvc.perform(post("/brandform")
             )
             .andExpect(status().is3xxRedirection())
-//            .andExpect(model().hasNoErrors()) //we change the redirect to main entity page
+            .andExpect(model().hasNoErrors())
             .andReturn()
             .getRequest()
             .getSession();
+
         assertNotNull(session.getAttribute("successMessages"));
     }
 
     @Test
     public void testRemove() throws Exception {
         HttpSession session = mockMvc.perform((post("/brandform"))
-            .param("delete", "").param("brandId", "1"))
+            .param("delete", "").param("brandId", "-2"))
             .andExpect(status().is3xxRedirection())
             .andReturn().getRequest().getSession();
 

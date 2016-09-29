@@ -24,7 +24,7 @@
 
     <!-- runs all targets -->
     <target name="run-all-tests"
-        depends="Login,Logout,PasswordHint,Signup,UserTests,StaticPages,WebServices,DWR,FileUpload,ShoesTests,BrandTests,BrandTests"
+        depends="Login,Logout,PasswordHint,Signup,UserTests,StaticPages,WebServices,DWR,FileUpload,ShoesTests,BrandTests,ShoesTests,BrandTests,BrandTests"
         description="Call and executes all test cases (targets)"/>
 
     <!-- runs user-related tests -->
@@ -255,6 +255,8 @@
         </webtest>
     </target>
     
+    
+    
     <!--Brand-START-->
     <!-- runs brand-related tests -->
     <target name="BrandTests"
@@ -440,6 +442,8 @@
         </webtest>
     </target>    <!--Shoes-END-->
 </project>
+
+
 
 
 

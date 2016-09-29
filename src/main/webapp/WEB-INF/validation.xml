@@ -51,11 +51,15 @@
             </field>
         </form>
         
+        
+        
+        
+        
+        
+        
+        
         <!--Brand-START-->
         <form name="brand">
-        	<field property="brandName" depends="required">
-                <arg key="brand.brandName"/>
-            </field>
         </form>
         <!--Brand-END-->
         <!--Shoes-START-->

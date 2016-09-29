@@ -27,7 +27,7 @@ public class ShoesManagerImplTest extends BaseManagerMockTestCase {
     public void testGetShoes() {
         log.debug("testing get...");
         //given
-        final Integer shoesId = 7L;
+        final Integer shoesId = 7;
         final Shoes shoes = new Shoes();
         given(dao.get(shoesId)).willReturn(shoes);
 
@@ -74,7 +74,7 @@ public class ShoesManagerImplTest extends BaseManagerMockTestCase {
         log.debug("testing remove...");
 
         //given
-        final Integer shoesId = -11L;
+        final Integer shoesId = -11;
         willDoNothing().given(dao).remove(shoesId);
 
         //when

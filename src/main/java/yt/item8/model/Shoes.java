@@ -5,6 +5,7 @@ import java.io.Serializable;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -101,8 +102,11 @@ public class Shoes extends BaseObject implements Serializable, EntityInterface {
 	}
 
 	@ManyToOne(
-		cascade = { CascadeType.PERSIST, CascadeType.MERGE })
-	@JoinColumn(name = "brandId", nullable = false)
+		fetch = FetchType.LAZY,
+		cascade = { CascadeType.REFRESH, CascadeType.PERSIST })
+	@JoinColumn(
+		name = "brandId",
+		nullable = false)
 	public Brand getBrand() {
 		return brand;
 	}
@@ -134,7 +138,8 @@ public class Shoes extends BaseObject implements Serializable, EntityInterface {
 		setBrand(null);
 
 	}
-	
+
+//	@Field
 	@Transient
 	public int getBrandId() {
 		return brandId;

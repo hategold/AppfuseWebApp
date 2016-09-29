@@ -21,8 +21,20 @@
 <form:form commandName="shoes" method="post" action="shoesform" cssClass="well"
            id="shoesForm" onsubmit="return validateShoes(this)">
 <form:hidden path="shoesId"/>
-    <!-- todo: change this to read the identifier field from the other pojo -->
-    <form:select cssClass="form-control" path="brand" items="brandList" itemLabel="label" itemValue="value"/>
+    <!-- todo: change this to read the identifier field from the other pojo <spring:bind path="brand.brandId"></spring:bind>-->
+    
+    <!--<spring:bind path="shoes.brand.brandId">
+    <div class="form-group${(not empty status.errorMessage) ? ' has-error' : ''}">
+    </spring:bind>
+        <appfuse:label key="brand.brandId" styleClass="control-label"/>
+        <form:input cssClass="form-control" path="brand.brandId" id="brand.brandId"  maxlength="255"/>
+        <form:errors path="brand.brandId" cssClass="help-block"/>
+    </div>-->
+    
+    <form:select cssClass="form-control" path="brand.brandId" id="brand">
+    	<form:options items="${brandList}" itemValue="Id" itemLabel="brandName"/>
+    </form:select>
+
     <spring:bind path="shoes.category">
     <div class="form-group${(not empty status.errorMessage) ? ' has-error' : ''}">
     </spring:bind>
